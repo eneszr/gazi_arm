@@ -1,19 +1,20 @@
 #include <stdio.h>
+char degisken;
+int c = 0,b;
+int sonuc=55;
 
 int main(void)
 {
-   char x;
-   int c = 0,b;
-   int sonuc=55;
     printf("Ilk sayiyi girin = !\n");
    scanf("%d",&c); printf("%d",c);
     printf("Toplama icin 't' , cıkarma icin 'c' , carpma icin 'r', bolme icin b girin = !\n");
-printf("%d",c);
-    scanf("%s",&x);
+
+
+    scanf("%s",&degisken);
 
 
 
-    switch(x)
+    switch(degisken)
     {
 
             case 't':    printf("toplamadesin= !\n"); break;
@@ -26,7 +27,7 @@ printf("%d",c);
     printf("ikinci sayiyi girin = !\n");
     scanf("%d",&b);
 
-    switch(x)
+    switch(degisken)
     {
 
             case 't':   sonuc = (c + b); break;
