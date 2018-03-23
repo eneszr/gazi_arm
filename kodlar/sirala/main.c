@@ -1,39 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-int numbers[25];
-
-#define ARRAY_SIZE(_a) sizeof(_a) / sizeof(_a[0])
-
-static void sirala(int arr[], int n)
-{
-	for (int i = 0; i < n; i++) {
-		for (int j = 0 ; j < n - i - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-}
-
-static void doldur(int arr[], int n)
-{
-    //yaz_beni;
-}
-
-static void yazdir(int arr[], int n)
-{
-    //yaz_beni;
-}
-
+int sayilar[6] = {50,-85,92,12,-3,0};
+int sonuc[6]= {0,0,0,0,0,0};
+int i=0;
 int main(void)
 {
-	doldur(numbers, ARRAY_SIZE(numbers));
-	yazdir(numbers, ARRAY_SIZE(numbers));
-	sirala(numbers, ARRAY_SIZE(numbers));
-	yazdir(numbers, ARRAY_SIZE(numbers));
-	return 0;
+    for(int b=0;b<6;b++)
+    {
+        printf("%d inci sayiyi girin ...",b+1);
+        scanf("%d",&sayilar[b]);
+    }
+    for(int z =0; z<6;z++)
+    {
+      for(int y=0;y<6;y++)
+      {
+         if (sayilar[i]<sayilar[y])
+        {
+              i=y;
+        }
+      }
+      sonuc[z]=sayilar[i];
+      sayilar[i]=-9999;
+      i=0;
+    }
+    for(int a=5 ; a>=0; a--)
+    {
+        printf("%d \n",sonuc[a]);
+    }
 }
+
 
